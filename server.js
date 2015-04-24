@@ -1,4 +1,5 @@
 var express = require('express'),
+    _ = require('underscore'),
     path = require('path'),
     http = require('http'),
     wine = require('./routes/wines');

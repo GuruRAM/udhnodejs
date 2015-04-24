@@ -1,98 +1,8 @@
-/*var mongo = require('mongodb');
+    var _ = require("underscore");
 
-var Server = mongo.Server,
-    Db = mongo.Db,
-    BSON = mongo.BSONPure;
-
-var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('winedb', server, {safe: true});
-
-
-db.open(function(err, db) {
-    if(!err) {
-        console.log("Connected to 'winedb' database");
-        db.collection('wines', {safe:true}, function(err, collection) {
-            if (err) {
-                console.log("The 'wines' collection doesn't exist. Creating it with sample data...");
-                populateDB();
-            }
-        });
-    }
-});
-
-exports.findById = function(req, res) {
-    var id = req.params.id;
-    console.log('Retrieving wine: ' + id);
-    db.collection('wines', function(err, collection) {
-        collection.findOne({'_id':new BSON.ObjectID(id)}, function(err, item) {
-            res.send(item);
-        });
-    });
-};
-
-exports.findAll = function(req, res) {
-    db.collection('wines', function(err, collection) {
-        collection.find().toArray(function(err, items) {
-            res.send(items);
-        });
-    });
-};
-
-exports.addWine = function(req, res) {
-    var wine = req.body;
-    console.log('Adding wine: ' + JSON.stringify(wine));
-    db.collection('wines', function(err, collection) {
-        collection.insert(wine, {safe:true}, function(err, result) {
-            if (err) {
-                res.send({'error':'An error has occurred'});
-            } else {
-                console.log('Success: ' + JSON.stringify(result[0]));
-                res.send(result[0]);
-            }
-        });
-    });
-}
-
-exports.updateWine = function(req, res) {
-    var id = req.params.id;
-    var wine = req.body;
-    delete wine._id;
-    console.log('Updating wine: ' + id);
-    console.log(JSON.stringify(wine));
-    db.collection('wines', function(err, collection) {
-        collection.update({'_id':new BSON.ObjectID(id)}, wine, {safe:true}, function(err, result) {
-            if (err) {
-                console.log('Error updating wine: ' + err);
-                res.send({'error':'An error has occurred'});
-            } else {
-                console.log('' + result + ' document(s) updated');
-                res.send(wine);
-            }
-        });
-    });
-}
-
-exports.deleteWine = function(req, res) {
-    var id = req.params.id;
-    console.log('Deleting wine: ' + id);
-    db.collection('wines', function(err, collection) {
-        collection.remove({'_id':new BSON.ObjectID(id)}, {safe:true}, function(err, result) {
-            if (err) {
-                res.send({'error':'An error has occurred - ' + err});
-            } else {
-                console.log('' + result + ' document(s) deleted');
-                res.send(req.body);
-            }
-        });
-    });
-}
-*/
-/*--------------------------------------------------------------------------------------------------------------------*/
-// Populate database with sample data -- Only used once: the first time the application is started.
-// You'd typically not find this code in a real-life app, since the database would already exist.
-
-    window.WineCollection = new WineCollection(
+    var WineCollection = [
     {
+	id: 1,
         name: "CHATEAU DE SAINT COSME",
         year: "2009",
         grapes: "Grenache / Syrah",
@@ -102,6 +12,7 @@ exports.deleteWine = function(req, res) {
         picture: "saint_cosme.jpg"
     },
     {
+        id: 2,
         name: "LAN RIOJA CRIANZA",
         year: "2006",
         grapes: "Tempranillo",
@@ -111,6 +22,7 @@ exports.deleteWine = function(req, res) {
         picture: "lan_rioja.jpg"
     },
     {
+        id: 3,
         name: "MARGERUM SYBARITE",
         year: "2010",
         grapes: "Sauvignon Blanc",
@@ -120,6 +32,7 @@ exports.deleteWine = function(req, res) {
         picture: "margerum.jpg"
     },
     {
+        id: 4,
         name: "OWEN ROE \"EX UMBRIS\"",
         year: "2009",
         grapes: "Syrah",
@@ -129,6 +42,7 @@ exports.deleteWine = function(req, res) {
         picture: "ex_umbris.jpg"
     },
     {
+        id: 5,
         name: "REX HILL",
         year: "2009",
         grapes: "Pinot Noir",
@@ -138,6 +52,7 @@ exports.deleteWine = function(req, res) {
         picture: "rex_hill.jpg"
     },
     {
+        id: 6,
         name: "VITICCIO CLASSICO RISERVA",
         year: "2007",
         grapes: "Sangiovese Merlot",
@@ -147,6 +62,7 @@ exports.deleteWine = function(req, res) {
         picture: "viticcio.jpg"
     },
     {
+        id: 7,
         name: "CHATEAU LE DOYENNE",
         year: "2005",
         grapes: "Merlot",
@@ -156,6 +72,7 @@ exports.deleteWine = function(req, res) {
         picture: "le_doyenne.jpg"
     },
     {
+        id: 8,
         name: "DOMAINE DU BOUSCAT",
         year: "2009",
         grapes: "Merlot",
@@ -165,6 +82,7 @@ exports.deleteWine = function(req, res) {
         picture: "bouscat.jpg"
     },
     {
+        id: 9,
         name: "BLOCK NINE",
         year: "2009",
         grapes: "Pinot Noir",
@@ -174,6 +92,7 @@ exports.deleteWine = function(req, res) {
         picture: "block_nine.jpg"
     },
     {
+        id: 10,
         name: "DOMAINE SERENE",
         year: "2007",
         grapes: "Pinot Noir",
@@ -183,6 +102,7 @@ exports.deleteWine = function(req, res) {
         picture: "domaine_serene.jpg"
     },
     {
+        id: 11,
         name: "BODEGA LURTON",
         year: "2011",
         grapes: "Pinot Gris",
@@ -192,6 +112,7 @@ exports.deleteWine = function(req, res) {
         picture: "bodega_lurton.jpg"
     },
     {
+        id: 12,
         name: "LES MORIZOTTES",
         year: "2009",
         grapes: "Chardonnay",
@@ -201,6 +122,7 @@ exports.deleteWine = function(req, res) {
         picture: "morizottes.jpg"
     },
     {
+        id: 13,
         name: "ARGIANO NON CONFUNDITUR",
         year: "2009",
         grapes: "Cabernet Sauvignon",
@@ -210,6 +132,7 @@ exports.deleteWine = function(req, res) {
         picture: "argiano.jpg"
     },
     {
+        id: 14,
         name: "DINASTIA VIVANCO ",
         year: "2008",
         grapes: "Tempranillo",
@@ -219,6 +142,7 @@ exports.deleteWine = function(req, res) {
         picture: "dinastia.jpg"
     },
     {
+        id: 15,
         name: "PETALOS BIERZO",
         year: "2009",
         grapes: "Mencia",
@@ -228,6 +152,7 @@ exports.deleteWine = function(req, res) {
         picture: "petalos.jpg"
     },
     {
+        id: 16,
         name: "SHAFER RED SHOULDER RANCH",
         year: "2009",
         grapes: "Chardonnay",
@@ -237,6 +162,7 @@ exports.deleteWine = function(req, res) {
         picture: "shafer.jpg"
     },
     {
+        id: 17,
         name: "PONZI",
         year: "2010",
         grapes: "Pinot Gris",
@@ -246,6 +172,7 @@ exports.deleteWine = function(req, res) {
         picture: "ponzi.jpg"
     },
     {
+        id: 18,
         name: "HUGEL",
         year: "2010",
         grapes: "Pinot Gris",
@@ -255,6 +182,7 @@ exports.deleteWine = function(req, res) {
         picture: "hugel.jpg"
     },
     {
+        id: 19,
         name: "FOUR VINES MAVERICK",
         year: "2011",
         grapes: "Zinfandel",
@@ -264,6 +192,7 @@ exports.deleteWine = function(req, res) {
         picture: "fourvines.jpg"
     },
     {
+        id: 19,
         name: "QUIVIRA DRY CREEK VALLEY",
         year: "2009",
         grapes: "Zinfandel",
@@ -273,6 +202,7 @@ exports.deleteWine = function(req, res) {
         picture: "quivira.jpg"
     },
     {
+        id: 20,
         name: "CALERA 35TH ANNIVERSARY",
         year: "2010",
         grapes: "Pinot Noir",
@@ -282,6 +212,7 @@ exports.deleteWine = function(req, res) {
         picture: "calera.jpg"
     },
     {
+        id: 21,
         name: "CHATEAU CARONNE STE GEMME",
         year: "2010",
         grapes: "Cabernet Sauvignon",
@@ -291,6 +222,7 @@ exports.deleteWine = function(req, res) {
         picture: "caronne.jpg"
     },
     {
+        id: 22,
         name: "MOMO MARLBOROUGH",
         year: "2010",
         grapes: "Sauvignon Blanc",
@@ -300,6 +232,7 @@ exports.deleteWine = function(req, res) {
         picture: "momo.jpg"
     },
     {
+        id: 23,
         name: "WATERBROOK",
         year: "2009",
         grapes: "Merlot",
@@ -307,43 +240,29 @@ exports.deleteWine = function(req, res) {
         region: "Washington",
         description: "Legend has it the gods didn't share their ambrosia with mere mortals.  This merlot may be the closest we've ever come to a taste of heaven.",
         picture: "waterbrook.jpg"
-    });
-
-   /* db.collection('wines', function(err, collection) {
-        collection.insert(wines, {safe:true}, function(err, result) {});
-    });
-*/
-//};
-
-
+    }];
 
 exports.findById = function(req, res) {
     var id = req.params.id;
     console.log('Retrieving wine: ' + id);
-
-    window.WineCollection .findOne({'_id':new BSON.ObjectID(id)}, function(err, item) {
-            res.send(item);
-        });
+    res.send(_.findWhere(WineCollection, {id: id}));
 };
 
 exports.findAll = function(req, res) {
-    window.WineCollection .find().toArray(function(err, items) {
-            res.send(items);
-        });
+    res.send(_.toArray(WineCollection));
 };
 
 exports.addWine = function(req, res) {
     var wine = req.body;
     console.log('Adding wine: ' + JSON.stringify(wine));
-    window.WineCollection.add(wine);
+    WineCollection.push(wine);
 };
 
 exports.updateWine = function(req, res) {
     var id = req.params.id;
     var wine = req.body;
-    delete wine._id;
+    delete wine.id;
     console.log('Updating wine: ' + id);
-
 };
 
 exports.deleteWine = function(req, res) {
