@@ -15,14 +15,16 @@ exports.getResult = function(req, res) {
     //toStation
     //time
     //result
-    //Score пїЅпїЅпїЅпїЅпїЅпїЅ (1-3)
-    //AveragePassengerCount пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    //Score Оценка (1-3)
+    //AveragePassengerCount
     //Time from
     //Time to
     //Number of sitting places in carriage
     //Number of trains
-    //Density пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
-    var item = _.findWhere(items, params);
+    //Density per square meter
+    var searchQuery = {time: parseInt(req.body.time), name: req.body.name};
+    var item = _.findWhere(items, searchQuery);
+    console.log(item);
     var passengers = parseInt(item.numberInCarriage);
     var defaultSittingPlaces = 42;
     var score = 3;
