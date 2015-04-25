@@ -3,7 +3,7 @@ var express = require('express'),
     path = require('path'),
     http = require('http'),
     metro = require('./routes/metro');
-    node_xls = require('xls-to-json');
+ //   node_xls = require('xls-to-json');
 
 var app = express();
 
@@ -25,7 +25,7 @@ function loadFromXsl(){
     node_xj({
         input: "c:\\UrbanData\\udhnodejs\\APL.xls",  // input xls 
         output: "c:\\UrbanData\\udhnodejs\\APL.json", // output json 
-        sheet: "NewSheet",  // specific sheetname 
+        sheet: "NewSheet"  // specific sheetname
     }, function(err, result) {
         if(err) {
             console.error(err);

@@ -1,5 +1,5 @@
 var _ = require("underscore");
-var items = require("c:\\UrbanData\\udhnodejs\\result.json");
+var items = require("./../result.json");
 var stations = _(items).chain().sortBy('name').pluck('name').unique().value() ;
 console.log(stations);
 
