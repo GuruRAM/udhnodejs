@@ -2,10 +2,7 @@ var AppRouter = Backbone.Router.extend({
 
     routes: {
         ""                  : "home",
-        "wines"	: "list",
-        "wines/page/:page"	: "list",
-        "wines/add"         : "addWine",
-        "wines/:id"         : "wineDetails",
+        "result"         : "getResult",
         "about"             : "about"
     },
 
@@ -14,14 +11,50 @@ var AppRouter = Backbone.Router.extend({
         $('.header').html(this.headerView.el);
     },
 
-    home: function (id) {
-        var stationList = new StationCollection();
-        stationList.fetch({success: function(){
-            this.homeView = new HomeView({model: stationList});
+    home: function () {
+        var that = this;
+        this.result = this.result != null ? this.result : {};
+        if(this.stationList==null) {
+            this.stationList = new StationCollection();
+            this.stationList.on("toValueChanged", function(stationTo) {that.result.stationTo = stationTo;
+            });
+            this.stationList.on("fromValueChanged", function(stationFrom) {that.result.stationFrom = stationFrom;
+            });
+            this.stationList.on("timeChanged", function(time) {that.result.time = time;
+                alert(time);
+            });
+            this.stationList.fetch({
+                success: function () {
+                    that.homeView = new HomeView({model: that.stationList});
+                    $('#content').html(that.homeView.el);
+                    that.homeView.render(that.homeView);
+                }
+            });
+        } else {
+            that.homeView = new HomeView({model: that.stationList});
             $('#content').html(this.homeView.el);
-        }});
+            that.homeView.render(that.homeView);
+        }
 
+        /*
+        if(this.result != null) {
+            this.result = new ResultModel();
+        }
+
+        new ResultView({model: this.result}).render();
+        */
         this.headerView.selectMenuItem('home-menu');
+    },
+
+    getResult: function() {
+        $.ajax({
+            type: "POST",
+            url: "result",
+            data: JSON.stringify({name:this.result.stationFrom,time:this.result.time}),
+            success: function(data) {
+                alert(data);
+            }
+        });
     }
 /*
 	list: function(page) {

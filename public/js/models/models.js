@@ -109,5 +109,13 @@ window.StationCollection = Backbone.Collection.extend({
     model: Station,
 
     url: "/stations"
+});
 
+window.Result = Backbone.Model.extend({
+    urlRoot: "/result",
+    defaults: {
+        stationFrom: "",
+        stationTo: "",
+        time: ""
+    }
 });
