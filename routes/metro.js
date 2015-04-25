@@ -1,6 +1,6 @@
 var _ = require("underscore");
-var items = require("c:\\UrbanData\\udhnodejs\\result.json");
-var stations = _(items).chain().sortBy('name').pluck('name').unique().value() ;
+var items = require("./../result.json");
+var stations = _(items).chain().sortBy('name').pluck('name').unique().map(function(item){return {name: item, color: 'blue'}}).value();
 console.log(stations);
 
 exports.getStations = function(req, res) {
@@ -9,24 +9,35 @@ exports.getStations = function(req, res) {
     res.send(stations);
 };
 
-exports.findAll = function(req, res) {
-    res.send(_.toArray(WineCollection));
-};
-
-exports.addWine = function(req, res) {
-    var wine = req.body;
-    console.log('Adding wine: ' + JSON.stringify(wine));
-    WineCollection.push(wine);
-};
-
-exports.updateWine = function(req, res) {
-    var id = req.params.id;
-    var wine = req.body;
-    delete wine.id;
-    console.log('Updating wine: ' + id);
-};
-
-exports.deleteWine = function(req, res) {
-    var id = req.params.id;
-    console.log('Deleting wine: ' + id);
+exports.getResult = function(req, res) {
+    //params:
+    //fromStation
+    //toStation
+    //time
+    //result
+    //Score ќценка (1-3)
+    //AveragePassengerCount —реднее количество людей в вагоне
+    //Time from
+    //Time to
+    //Number of sitting places in carriage
+    //Number of trains
+    //Density плотность на квадратный метр
+    var item = _.findWhere(items, params);
+    var passengers = parseInt(item.numberInCarriage);
+    var defaultSittingPlaces = 42;
+    var score = 3;
+    if(defaultSittingPlaces-passengers >= 10)
+        score = 1;
+    else if(defaultSittingPlaces-passengers >= -5)
+        score = 2;   
+    var result = {
+        score: score,
+        averagePassengerCount: passengers,
+        timeFrom: item.time,
+        timeTo: parseInt(item.time) + 1,
+        defaultSittingPlaces: defaultSittingPlaces,
+        trainQuantity: item.trainQuantity,
+        density: item.density
+    };
+    res.send(result);
 };
