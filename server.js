@@ -3,7 +3,7 @@ var express = require('express'),
     path = require('path'),
     http = require('http'),
     metro = require('./routes/metro');
- //   node_xls = require('xls-to-json');
+    //node_xls = require('xls-to-json');
 
 var app = express();
 
@@ -15,6 +15,7 @@ app.configure(function () {
 });
 
 app.get('/stations', metro.getStations);
+app.get('/result', metro.getResult);
 //saveToFile(loadFromJson());
 http.createServer(app).listen(app.get('port'), function () {
 });
