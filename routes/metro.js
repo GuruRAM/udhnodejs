@@ -1,17 +1,12 @@
 var _ = require("underscore");
 var items = require("c:\\UrbanData\\udhnodejs\\result.json");
+var stations = _(items).chain().sortBy('name').pluck('name').unique().value() ;
+console.log(stations);
 
-app.get('/wines', wine.findAll);
-app.get('/wines/:id', wine.findById);
-app.post('/wines', wine.addWine);
-app.put('/wines/:id', wine.updateWine);
-app.delete('/wines/:id', wine.deleteWine);
-
-
-exports.findById = function(req, res) {
+exports.getStations = function(req, res) {
     var id = req.params.id;
-    console.log('Retrieving wine: ' + id);
-    res.send(_.findWhere(WineCollection, {id: id}));
+    console.log('Retrieving metro stations');
+    res.send(stations);
 };
 
 exports.findAll = function(req, res) {

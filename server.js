@@ -2,8 +2,7 @@ var express = require('express'),
     _ = require('underscore'),
     path = require('path'),
     http = require('http'),
-    wine = require('./routes/wines');
-    wine = require('./routes/metro');
+    metro = require('./routes/metro');
     node_xls = require('xls-to-json');
 
 var app = express();
@@ -15,14 +14,8 @@ app.configure(function () {
     app.use(express.static(path.join(__dirname, 'public')));
 });
 
-app.get('/wines', wine.findAll);
-app.get('/wines/:id', wine.findById);
-app.post('/wines', wine.addWine);
-app.put('/wines/:id', wine.updateWine);
-app.delete('/wines/:id', wine.deleteWine);
+app.get('/stations', metro.getStations);
 //saveToFile(loadFromJson());
-var items = require("c:\\UrbanData\\udhnodejs\\result.json");
-
 http.createServer(app).listen(app.get('port'), function () {
 });
 console.log("Express server listening on port " + app.get('port'));
