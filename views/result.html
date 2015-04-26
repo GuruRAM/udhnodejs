@@ -33,17 +33,25 @@
 <div class="container">
     <div class="row-fluid">
         <div id="content" class="span12>">
-            <div><% if (result.score == 1) { %>Вы скорее всего найдете себе место!
+            <div><% if (result.score == 1) { %>
+                 <img src='img\green_light.png'/>
                  <% } else if (result.score == 2) { %>
-                 Вы можете не найти себе место!
+                 <img src='img\yellow_light.png'/>
                  <% } else { %>
-                 Вы скорее всего не найдете себе место!
+                 <img src='img\red_light.png'/>
                  <% } %>
             </div>
-            <div><a href='#'>пояснение</a></div>
-            <div>
-                Результат считается исходя из числа сидячих мест в вагоне <%=result.defaultSittingPlaces %> и средней загруженности
-                вагона <%=result.averagePassengerCount %> человек с <%=result.timeFrom %>:00 по <%=result.timeTo %>:00 часов 
+            <h2><% if (result.score == 1) { %>Места есть!
+                 <% } else if (result.score == 2) { %>
+                 Неплохие шансы найти свободное место!
+                 <% } else { %>
+                 Шансов почти нет!
+                 <% } %>
+            </h2>
+            <div><p><a href='#' class = 'show-spoiler'>пояснить</a></p></div>
+            <div class = 'spoiler' style='display: none;'>
+                Результат считается исходя из числа сидячих мест в вагоне: <%=result.defaultSittingPlaces %> и средней загруженности
+                вагона: <%=result.averagePassengerCount %> человек с <%=result.timeFrom %>:00 по <%=result.timeTo %>:00 часов 
             </div>
             <button type="button" class="btn btn-default">Найти когда посвободнее?</button>
         </div>
@@ -58,6 +66,14 @@
 <script src="lib/underscore-min.js"></script>
 <script src="lib/backbone-min.js"></script>
 <script src="lib/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.show-spoiler').click(function(){
+            $('.show-spoiler').hide();
+            $('.spoiler').show();
+        });
+    });
+</script>
 
 </body>
 </html>
