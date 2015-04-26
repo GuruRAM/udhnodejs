@@ -8,6 +8,8 @@ var express = require('express'),
 var app = express();
 
 app.configure(function () {
+    app.engine('html', require('uinexpress').__express)
+    app.set('view engine', 'html')
     app.set('port', process.env.PORT || 3000);
     app.use(express.logger('dev'));  /* 'default', 'short', 'tiny', 'dev' */
     app.use(express.bodyParser()),
@@ -16,6 +18,8 @@ app.configure(function () {
 
 app.get('/stations', metro.getStations);
 app.post('/result', metro.getResult);
+app.get('/test', metro.test);
+app.get('/test1', metro.test1);
 //saveToFile(loadFromJson());
 http.createServer(app).listen(app.get('port'), function () {
 });
