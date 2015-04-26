@@ -41,7 +41,7 @@ exports.getResult = function(req, res) {
         trainQuantity: item.trainQuantity,
         density: item.density
     };
-    res.send(result);
+    res.render('result.html', { layout: false, result: result});
 };
 exports.home = function(req, res) {
 
