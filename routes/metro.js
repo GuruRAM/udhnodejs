@@ -15,7 +15,7 @@ exports.getResult = function(req, res) {
     //toStation
     //time
     //result
-    //Score Оценка (1-3)
+    //Score пїЅпїЅпїЅпїЅпїЅпїЅ (1-3)
     //AveragePassengerCount
     //Time from
     //Time to
@@ -43,12 +43,14 @@ exports.getResult = function(req, res) {
     };
     res.send(result);
 };
-exports.test = function(req, res) {
-    res.render('index.html', { layout: false, title: 'Hey', message: 'Hello there!'});
-}
+exports.home = function(req, res) {
+
+    var model={
+        stations: stations
+    };
+
+    res.render('index.html', { layout: false, model: model});
+};
 exports.test1 = function(req, res) {
     res.render('index1.html', { layout: false, title: 'Hey1', message: 'Hello1 there1!'});
-}
-exports.home = function(req, res) {
-    res.render('index.html', { layout: false });
-}
+};

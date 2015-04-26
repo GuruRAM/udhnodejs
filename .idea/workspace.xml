@@ -2,69 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96255bd9-84d9-42df-891b-6d6845666543" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/img/bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/blog.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/discuss.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/download.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/github.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/wine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/models/models.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/views/about.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/views/header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/views/home.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/views/paginator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/views/resultView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/views/winedetails.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/views/winelist.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/backbone-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/jquery-1.8.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/underscore-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/argiano.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/block_nine.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/bodega_lurton.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/bouscat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/calera.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/capineto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/caronne.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/dinastia.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/domaine_serene.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/ex_umbris.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/fourvines.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/generic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/hugel.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/lan_rioja.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/le_doyenne.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/margerum.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/momo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/morizottes.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/petalos.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/ponzi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/quivira.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/rex_hill.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/saint_cosme.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/shafer.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/viticcio.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pics/waterbrook.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tpl/AboutView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tpl/HeaderView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tpl/HomeView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tpl/ResultView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tpl/WineListItemView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/tpl/WineView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/css/img/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/img/blog.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/img/discuss.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/img/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/img/github.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/img/twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/img/wine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/lib/backbone-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/lib/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/lib/jquery-1.8.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/lib/underscore-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/tpl/AboutView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/tpl/HeaderView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/tpl/HomeView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/tpl/ResultView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/tpl/WineListItemView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/content/tpl/WineView.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/metro.js" afterPath="$PROJECT_DIR$/routes/metro.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="udhnodejs.iws" />
@@ -87,31 +50,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="53.11111">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.031914894">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metro.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="metro.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/metro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.30964467">
-              <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeView.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/tpl/HomeView.html">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -130,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routes/metro.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/css/styles.css" />
         <option value="$PROJECT_DIR$/public/tpl/HeaderView.html" />
@@ -140,6 +102,7 @@
         <option value="$PROJECT_DIR$/public/js/views/home.js" />
         <option value="$PROJECT_DIR$/public/tpl/HomeView.html" />
         <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/routes/metro.js" />
         <option value="$PROJECT_DIR$/views/index.html" />
       </list>
     </option>
@@ -162,7 +125,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1431" />
+    <option name="x" value="65" />
     <option name="y" value="-744" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
@@ -234,38 +197,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="udhnodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="udhnodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="udhnodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="udhnodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -543,15 +474,15 @@
       <option name="number" value="Default" />
       <updated>1429969982769</updated>
       <workItem from="1429969984148" duration="12367000" />
-      <workItem from="1430031698587" duration="379000" />
+      <workItem from="1430031698587" duration="1521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12746000" />
+    <option name="totallyTimeSpent" value="13888000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="-744" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="-744" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -561,6 +492,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25338647" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
@@ -569,14 +501,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30112723" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -587,40 +518,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/tpl/HomeView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="53.11111">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/metro.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.30964467">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.031914894">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
