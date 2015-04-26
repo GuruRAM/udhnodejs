@@ -63,16 +63,16 @@ legend {
 }
 
 .home-hero {
-    font-family: "Andika";
-    font-size: 36;
-    color: white;
-    background-color:greenyellow;
+    background-image:url("../img/empty-train.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    padding-right: 180px;
+    padding-left: 180px;
+    padding-top: 0px;
+    padding-bottom: 360px;
     margin-top: -19px;
-    padding: 180px;
     text-align : center;
-    text-shadow: 1px 1px 1px #000;
+
 }
 
 @media only screen and ( max-width : 1000px ) {
@@ -122,4 +122,9 @@ legend {
 .well h3 {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.labelFont{
+    font-family: "Monaco";
+    font-size: 20px;
 }
