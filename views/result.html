@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Node Cellar</title>
+    <title>В метро сидя!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -30,7 +30,7 @@
     <div class="row-fluid">
         <div id="content" class="span12>">
             <% if (result.score == 1) { %>
-                <div class="home-hero">
+                <div class="home-hero-no-smoth">
                 <div>
                  <img src='img/green_light.png' class="imgMarker"/>
                  <% } else if (result.score == 2) { %>
@@ -55,9 +55,14 @@
                 Результат считается исходя из числа сидячих мест в вагоне(<%=result.defaultSittingPlaces %>) и средней загруженности
                 вагона по станции <%=result.stationFrom%>, составляющей <%=result.averagePassengerCount%> человек на временном интервале с <%=result.timeFrom %>:00 по <%=result.timeTo %>:00 часов
             </div>
+                    <% if (result.score != 1) { %>
             <button type="button" class="btn btn-default" onclick="goHome()">Найти когда посвободнее?</button>
+                    <%}%>
+
+
                 </div>
         </div>
+                    <a href="index">На главную</a>
     </div>
 </div>
 <!-- /container -->

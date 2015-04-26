@@ -19,6 +19,7 @@ app.configure(function () {
 app.get('/stations', metro.getStations);
 app.post('/result', metro.getResult);
 app.get('/index', metro.home);
+app.get('/addStatData', metro.addStatData);
 app.get('/result', metro.getResultSimplified);
 //saveToFile(loadFromJson());
 http.createServer(app).listen(app.get('port'), function () {

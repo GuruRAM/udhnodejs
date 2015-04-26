@@ -69,10 +69,22 @@ background-image: url("../img/empty-train.jpg");
     padding-right: 180px;
     padding-left: 180px;
     padding-top: 20px;
+    padding-bottom: 88px;
+    margin-top: -19px;
+    text-align : center;
+}
+.home-hero-no-smoth {
+    background-image: url("../img/empty-train.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-right: 180px;
+    padding-left: 180px;
+    padding-top: 20px;
     padding-bottom: 360px;
     margin-top: -19px;
     text-align : center;
 }
+
 .home-hero-smooth-middle{
     background:linear-gradient(
             rgba(0, 0, 0, 0.5),

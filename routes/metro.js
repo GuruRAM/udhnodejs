@@ -87,3 +87,12 @@ exports.getResultSimplified = function(req, res) {
     };
     res.render('result.html', { layout: false, result: result});
 };
+
+exports.addStatData = function(req, res) {
+
+    var model={
+        stations: stations
+    };
+
+    res.render('addStatData.html', { layout: false, model: model});
+};
