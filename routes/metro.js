@@ -49,3 +49,6 @@ exports.test = function(req, res) {
 exports.test1 = function(req, res) {
     res.render('index1.html', { layout: false, title: 'Hey1', message: 'Hello1 there1!'});
 }
+exports.home = function(req, res) {
+    res.render('index.html', { layout: false });
+}
