@@ -34,75 +34,85 @@
 
     <div class="row-fluid">
         <div id="content" class="span12>">
+            <form id="main" action="result">
+                <div class="home-hero">
+                    <h1>проверка свободных мест в вагоне</h1>
+                    <br/>
 
-            <div class="home-hero">
-                <h1>ЕСТЬ ?!</h1>
-                <h3>A sample application built with Backbone.js, Twitter Bootstrap, Node.js, Express, and MongoDB</h3>
-
-                <br/>
-
-                <table>
-                    <tr>
-                        <td>
-                            От
-                        </td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-expanded="true">
-                                    <div class="stationFromValue">Выберите станцию</div>
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                    <%_.each(model, function(item){ %>
-                                    <li><a class="stationFrom" role="menuitem" tabindex="-1" href="#"><%=item.name%></a></li>
+                    <table>
+                        <tr>
+                            <td>
+                                От
+                            </td>
+                            <td>
+                                <select  id="stationFrom">
+                                    <%_.each(model.stations, function(item){ %>
+                                    <option value="<%=item.name%>"><%=item.name%></option>
                                     <% });%>
-                                </ul>
-                            </div>
-                        </td>
-                        <td>
-                            до
-                        </td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-expanded="true">
-                                    <div class="stationToValue">Выберите станцию</div>
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                    <%_.each(model, function(item){ %>
-                                    <li><a class="stationTo" role="menuitem" tabindex="-1" href="#"><%=item.name%></a></li>
-                                    <% });%>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            время
-                        </td>
-                        <td>
-                            <select  class="time">
-                                <option value="6">6:00 - 7:00</option>
-                                <option value="7">7:00 - 8:00</option>
-                                <option value="8">8:00 - 9:00</option>
-                                <option value="9">9:00 - 10:00</option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
+                                </select>
+                            </td>
 
-                <div style="opacity: .9;">
-                    <a class="btn btn-large" href="#result">Есть сидячие места?</a>
+                        </tr>
+                        <tr>
+                            <td>
+                                до
+                            </td>
+                            <td>
+                                <select  id="stationTo">
+                                    <%_.each(model.stations, function(item){ %>
+                                    <option value="<%=item.name%>"><%=item.name%></option>
+                                    <% });%>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                время
+                            </td>
+                            <td>
+                                <select  class="time">
+                                    <option value="6">6:00 - 7:00</option>
+                                    <option value="7">7:00 - 8:00</option>
+                                    <option value="8">8:00 - 9:00</option>
+                                    <option value="9">9:00 - 10:00</option>
+                                    <option value="10">10:00 - 11:00</option>
+                                    <option value="11">11:00 - 12:00</option>
+                                    <option value="12">12:00 - 13:00</option>
+                                    <option value="13">13:00 - 14:00</option>
+                                    <option value="14">14:00 - 15:00</option>
+                                    <option value="15">15:00 - 16:00</option>
+                                    <option value="16">16:00 - 17:00</option>
+                                    <option value="17">17:00 - 18:00</option>
+                                    <option value="18">18:00 - 19:00</option>
+                                    <option value="19">19:00 - 20:00</option>
+                                    <option value="20">20:00 - 21:00</option>
+                                    <option value="21">21:00 - 22:00</option>
+                                    <option value="22">22:00 - 23:00</option>
+                                    <option value="23">23:00 - 24:00</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="opacity: .9;">
+                                    <a class="btn btn-large" href="#" onclick="postData()">Есть сидячие места?</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+
+
+
                 </div>
 
+                <div class="bs-docs-social">
+                    <div class="container">
 
-            </div>
-
-            <div class="bs-docs-social">
-                <div class="container">
-
+                    </div>
                 </div>
-            </div>
+
+        </form>
 
         </div>
     </div>
@@ -125,6 +135,13 @@
 <script src="lib/underscore-min.js"></script>
 <script src="lib/backbone-min.js"></script>
 <script src="lib/bootstrap.min.js"></script>
+<script>
+    function postData(){
+        alert(2);
+        $("#main").submit();
+    }
+
+</script>
 
 
 </body>
