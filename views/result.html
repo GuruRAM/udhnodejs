@@ -9,11 +9,7 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-        }
-    </style>
+
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
@@ -28,32 +24,39 @@
 
 <body>
 
-<div class="header"></div>
+
 
 <div class="container">
     <div class="row-fluid">
         <div id="content" class="span12>">
-            <div><% if (result.score == 1) { %>
-                 <img src='img\green_light.png'/>
+            <% if (result.score == 1) { %>
+                <div class="home-hero">
+                <div>
+                 <img src='img/green_light.png' class="imgMarker"/>
                  <% } else if (result.score == 2) { %>
-                 <img src='img\yellow_light.png'/>
+                <div class="home-hero-smooth-middle">
+                    <div>
+                 <img src='img/yellow_light.png' class="imgMarker" />
                  <% } else { %>
-                 <img src='img\red_light.png'/>
+                <div class="home-hero-smooth-hard">
+                <div>
+                 <img src='img/red_light.png' class="imgMarker"/>
                  <% } %>
             </div>
             <h2><% if (result.score == 1) { %>Места есть!
                  <% } else if (result.score == 2) { %>
-                 Неплохие шансы найти свободное место!
+                 Есть шансы найти свободное место, если повезет.
                  <% } else { %>
                  Шансов почти нет!
                  <% } %>
             </h2>
-            <div><p><a href='#' class = 'show-spoiler'>пояснить</a></p></div>
+            <div><p><a href='#' class = 'show-spoiler'>Почему мы так думаем?</a></p></div>
             <div class = 'spoiler' style='display: none;'>
-                Результат считается исходя из числа сидячих мест в вагоне: <%=result.defaultSittingPlaces %> и средней загруженности
-                вагона: <%=result.averagePassengerCount %> человек с <%=result.timeFrom %>:00 по <%=result.timeTo %>:00 часов 
+                Результат считается исходя из числа сидячих мест в вагоне(<%=result.defaultSittingPlaces %>) и средней загруженности
+                вагона по станции <%=result.stationFrom%>, составляющей <%=result.averagePassengerCount%> человек на временном интервале с <%=result.timeFrom %>:00 по <%=result.timeTo %>:00 часов
             </div>
-            <button type="button" class="btn btn-default">Найти когда посвободнее?</button>
+            <button type="button" class="btn btn-default" onclick="goHome()">Найти когда посвободнее?</button>
+                </div>
         </div>
     </div>
 </div>
@@ -73,6 +76,10 @@
             $('.spoiler').show();
         });
     });
+
+    function goHome(){
+        window.location="/index";
+    }
 </script>
 
 </body>

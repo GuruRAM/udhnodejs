@@ -63,17 +63,51 @@ legend {
 }
 
 .home-hero {
-    background-image:url("../img/empty-train.jpg");
+background-image: url("../img/empty-train.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding-right: 180px;
     padding-left: 180px;
-    padding-top: 0px;
+    padding-top: 20px;
     padding-bottom: 360px;
     margin-top: -19px;
     text-align : center;
-
 }
+.home-hero-smooth-middle{
+    background:linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/empty-train.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-right: 180px;
+    padding-left: 180px;
+    padding-top: 20px;
+    padding-bottom: 360px;
+    margin-top: -19px;
+    text-align : center;
+    color: goldenrod;
+}
+
+.home-hero-smooth-hard{
+    background:linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/empty-train.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-right: 180px;
+    padding-left: 180px;
+    padding-top: 20px;
+    padding-bottom: 360px;
+    margin-top: -19px;
+    text-align : center;
+    color: red;
+}
+
+
 
 @media only screen and ( max-width : 1000px ) {
     .home-hero {
@@ -127,4 +161,9 @@ legend {
 .labelFont{
     font-family: "Monaco";
     font-size: 20px;
+}
+
+.imgMarker{
+    width: 128px;
+    height: 128px;
 }
